@@ -18,7 +18,7 @@ const LoginForm = () => {
     dispatch(login(values))
       // после login переход на хоум
       .unwrap()
-      .then(() => navigate("/"));
+      .then(() => navigate("/contacts"));
     options.resetForm();
   };
 

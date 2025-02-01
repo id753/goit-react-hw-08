@@ -19,7 +19,7 @@ const RegistrationForm = () => {
     dispatch(register(value))
       // 8 после регистрации переход на хоум
       .unwrap()
-      .then(() => navigate("/"));
+      .then(() => navigate("/contacts"));
 
     options.resetForm();
   };
