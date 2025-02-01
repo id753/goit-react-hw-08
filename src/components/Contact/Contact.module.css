@@ -1,0 +1,45 @@
+.div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #070707;
+  margin-bottom: 10px;
+  height: 45px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.btn_delete {
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.btn_delete:hover {
+  background-color: #c0392b;
+}
+
+svg {
+  /* Стиль для иконки */
+  margin-right: 8px;
+}

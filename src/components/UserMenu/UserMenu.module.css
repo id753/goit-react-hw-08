@@ -1,0 +1,31 @@
+.user_menu {
+  display: flex;
+  gap: 50px;
+}
+.user_menu span {
+  font-weight: bold;
+  font-size: 25px;
+  align-items: center;
+  color: #eaff00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #007bff;
+}
+.user_menu button {
+  padding: 5px;
+  margin: 0 auto;
+  /* margin-top: 5px; */
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user_menu button:hover {
+  background-color: #851919;
+}

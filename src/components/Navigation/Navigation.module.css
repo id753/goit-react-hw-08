@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #007bff;
+}

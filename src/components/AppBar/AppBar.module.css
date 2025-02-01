@@ -1,0 +1,9 @@
+/* Стилі для хедера */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333; /* Темний фон хедера */
+  color: #ffffff; /* Білий текст */
+}
