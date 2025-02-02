@@ -41,7 +41,9 @@ function App() {
   }, [dispatch]);
 
   // 24 isRefreshing ? nul, далее создать приветроут 25
-  return isRefreshing ? null : (
+  return isRefreshing ? (
+    <div>Loading...</div>
+  ) : (
     <div>
       {/* <h1>Phonebook</h1> */}
       {/* // 2  n auth slice 3*/}

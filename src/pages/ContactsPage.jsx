@@ -5,12 +5,23 @@ import ContactForm from "../components/ContactForm/ContactForm";
 import SearchBox from "../components/SearchBox/SearchBox";
 import ContactList from "../components/ContactList/ContactList";
 import { changeFilter } from "../redux/filters/slice";
-import { addContact, deleteContact } from "../redux/contacts/operations";
+import {
+  addContact,
+  deleteContact,
+  fetchContacts,
+} from "../redux/contacts/operations";
+import { useEffect } from "react";
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
   const contacts = useSelector((state) => state.contacts.items);
   const filters = useSelector((state) => state.filters.name);
+
+  // загрузка контактов, вызов и получение контактов с сервера
+  // контакти будуть відображатися навіть після оновлення сторінки
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   // Фильтруем контакты по введенному имени
   const filteredContacts = contacts.filter((contact) =>
