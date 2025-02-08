@@ -25,7 +25,7 @@ const HomePage = () => {
 
         <div>
           <img
-            src={"../../public/hand.png"}
+            src={"/hand.png"}
             alt="phone in hand"
             className={s.homePageImg}
           />
