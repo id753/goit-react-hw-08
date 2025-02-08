@@ -37,7 +37,7 @@ const ContactList = () => {
   // );
 
   return (
-    <div>
+    <div className={s.nobackground}>
       {isError && <h2>Something went wrong!</h2>}
       {isLoading && <h2>Loading...</h2>}
 

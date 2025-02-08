@@ -11,16 +11,16 @@ import { addContact } from "../../redux/contacts/operations";
 
 // Валідація для форми через Yup
 const validationSchema = Yup.object({
-  // name: Yup.string()
-  //   .min(3, "Name must be at least 3 characters")
-  //   .max(50, "Name must be less than 50 characters")
-  //   .required("Name is required"),
-  // number: Yup.string()
-  //   .matches(
-  //     /^\+?\d{1,3}[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/,
-  //     "Invalid phone number"
-  //   )
-  //   .required("Phone number is required"),
+  name: Yup.string()
+    .min(3, "Name must be at least 3 characters")
+    .max(50, "Name must be less than 50 characters")
+    .required("Name is required"),
+  number: Yup.string()
+    .matches(
+      /^\+?\d{1,3}[-.\s]?\(?\d{1,4}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,4}$/,
+      "Invalid phone number"
+    )
+    .required("Phone number is required"),
 });
 
 const ContactForm = () => {
@@ -35,7 +35,7 @@ const ContactForm = () => {
   //   contacts.some((contact) => contact.name.toLowerCase() === name.toLowerCase());
 
   return (
-    <div>
+    <div className={s.container}>
       <Formik
         initialValues={{ name: "", number: "" }}
         validationSchema={validationSchema}
@@ -68,26 +68,26 @@ const ContactForm = () => {
           <Form className={s.form}>
             <div>
               <label>
-                <span>Name:</span>
+                <span className={s.span}>Name:</span>
                 <Field className={s.input} type="text" name="name" />
               </label>
-              {errors.name && touched.name && (
-                <div className={s.error_message}>{errors.name}</div>
-              )}
+              <div className={s.error_message}>
+                {errors.name && touched.name && errors.name}
+              </div>
             </div>
 
             <div>
               <label>
-                <span>Number:</span>
+                <span className={s.span}>Number:</span>
                 <Field className={s.input} type="text" name="number" />
               </label>
-              {errors.number && touched.number && (
-                <div className={s.error_message}>{errors.number}</div>
-              )}
+              <div className={s.error_message}>
+                {errors.number && touched.number && errors.number}
+              </div>
             </div>
 
             <button
-              className={s.btn_form}
+              className={s.form_btn}
               // onClick={() => dispatch(addContact(id))}
 
               type="submit"

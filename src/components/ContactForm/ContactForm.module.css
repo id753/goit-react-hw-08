@@ -1,11 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   border: 1px solid #000000;
   padding: 10px;
-  margin-bottom: 5px;
-  width: 50%;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 6px 8px rgba(0, 0, 0, 0.1); /* Эффектная тень */
+  margin: 20px;
+  transition: box-shadow 0.3s ease; /* Анимация при наведении */
+}
+.form:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 8px 10px rgba(0, 0, 0, 0.15); /* Более яркая тень при наведении */
+}
+.form_title {
+  margin: 0;
+  text-align: center;
 }
 
 label {
@@ -18,16 +35,14 @@ label {
 
 .input {
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 80%;
 }
 
-.btn_form {
+.form_btn {
+  box-sizing: border-box;
   padding: 10px;
-  margin: 0 auto;
-  margin-top: 5px;
   background-color: #4caf50;
   color: #fff;
   border: none;
@@ -37,13 +52,23 @@ label {
   transition: background-color 0.3s ease;
 }
 
-.btn_form:hover {
+.form_btn:hover {
   background-color: #45a049;
 }
 
-/* Стили для ошибки */
 .error_message {
   color: red;
   font-size: 12px;
-  margin-top: 4px;
+  margin: 0;
+  min-height: 15px;
+  line-height: 15px;
+}
+
+.text {
+  text-align: center;
+}
+
+.link {
+  color: #45a049;
+  margin-left: 5px;
 }

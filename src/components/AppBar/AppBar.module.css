@@ -1,9 +1,14 @@
 /* Стилі для хедера */
+body {
+  position: relative;
+}
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #333; /* Темний фон хедера */
-  color: #ffffff; /* Білий текст */
+  padding: 10px;
+  background-color: #333;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
 }

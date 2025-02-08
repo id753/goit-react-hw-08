@@ -1,4 +1,5 @@
 .div {
+  background-color: rgb(148, 185, 254);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,8 +7,14 @@
   border: 1px solid #070707;
   margin-bottom: 10px;
   height: 45px;
+  border-radius: 12px; /* Закругленные углы */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 6px 8px rgba(0, 0, 0, 0.1); /* Эффектная тень */
+  margin: 20px; /* Внешний отступ */
+  transition: box-shadow 0.3s ease; /* Анимация при наведении */
 }
-
+.div:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 8px 10px rgba(0, 0, 0, 0.15); /* Более яркая тень при наведении */
+}
 .text {
   display: flex;
   flex-direction: column;
@@ -42,4 +49,10 @@ p {
 svg {
   /* Стиль для иконки */
   margin-right: 8px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
